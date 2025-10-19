@@ -1,4 +1,5 @@
 <?php
+
 class Database {
     private $host = "mariadb-server";
     private $username = "root";
@@ -94,21 +95,21 @@ class Database {
     }
 }
 
-// Conexión a BBDD
+// Conexión a BBDD AP1.sql
 $db = new Database();
 
-// Extraer y mostrar usuarios existentes
+// Extraer y mostrar usuarios existentes.
 $db->selectUsuarios();
 
-// Insertar nuevo usuario Mauro con estado 1
+// Insertar nuevo usuario Mauro con estado 1.
 $nuevaId = $db->insertUsuario("Mauro", 1);
 
-// Actualizar estado a 0
+// Actualizar estado a 0.
 $db->updateEstado($nuevaId, 0);
 
-// Borrar el usuario insertado
+// Borrar el usuario insertado.
 $db->deleteUsuario($nuevaId);
 
-// Cerrar conexión
+// Cerrar conexión.
 $db->cerrarConexion();
 ?>
