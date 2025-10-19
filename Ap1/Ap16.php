@@ -1,5 +1,4 @@
 <?php
-
 class Database {
     private $host = "mariadb-server";
     private $username = "root";
